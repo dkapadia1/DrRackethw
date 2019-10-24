@@ -1,0 +1,12 @@
+;; The first three lines of this file were inserted by DrRacket. They record metadata
+;; about the language level of this file in a form that our tools can easily process.
+#reader(lib "htdp-beginner-abbr-reader.ss" "lang")((modname |912 challenge hw|) (read-case-sensitive #t) (teachpacks ()) (htdp-settings #(#t constructor repeating-decimal #f #t none #f () #f)))
+(require picturing-programs)
+(define r (rectangle 20 100 "solid" "red"))
+(define b (circle 10 "solid" "blue"))
+ (overlay/align "middle" "top"
+                b
+                (overlay/align "middle""top"
+                               (rectangle 20 10 "solid" "white")
+                               r
+                               ))
