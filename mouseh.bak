@@ -10,19 +10,12 @@
   (on-draw onface)
   (on-mouse mouthtaller))
 (define (bigears img x y event)
-  (beside (scale 1.1 img)
+  (beside (scale (abs x) (ellipse 20 20 "solid" "red"))
           (square 50 "solid" "transparent")
-          (scale 1.1 img)))
+          (scale (abs x)(ellipse 20 20 "solid" "red"))))
 (big-bang (square 500 "solid" "transparent")
   (on-draw onface)
   (on-mouse bigears))
 (define (orbit img x y e)
-  (rotate 1 img ))
-(define (starover img)
-  (overlay (overlay/align "left" "bottom"(star-polygon 50 5 3 "solid" "yellow")img) (square 500 "solid" "transparent")))
-(define planet
-  (beside (circle 20 "solid" "blue") (rectangle 20 400 "solid" "transparent")))
-(big-bang planet
-  (on-draw starover)
-  (on-mouse orbit))
+  (
   
